@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login — Supermercado Vieira</title>
+  <link rel="stylesheet" href="../css/base.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/dashboard.css"/>
+  <link rel="stylesheet" href="../css/theme.css"/>
+</head>
+<body class="theme-light">
+  <div class="login-page">
+    <div class="login-left">
+      <div class="login-card anim-up">
+        <div class="login-card__logo">
+          <img src="../assets/images/logo.svg" alt="Logo Supermercado Vieira" class="brand-logo brand-logo--lg"/>
+          <div class="login-card__logo-text">
+            <div class="login-card__logo-name">Supermercado Vieira</div>
+            <div class="login-card__logo-tag">Controle financeiro empresarial</div>
+          </div>
+        </div>
+        <div class="page-header__text">
+          <h1 class="page-title">Acesso do administrador</h1>
+          <p class="page-subtitle">Entre para gerenciar pagamentos, recebimentos, categorias, funcionários, vales e relatórios.</p>
+        </div>
+        <form class="login-form" id="loginForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="username">Usuário</label>
+            <input class="form-control" id="username" type="text" autocomplete="username" placeholder="Digite o usuário" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="password">Senha</label>
+            <input class="form-control" id="password" type="password" autocomplete="current-password" placeholder="Digite a senha" required>
+          </div>
+          <button class="btn btn-primary btn-lg btn-full" type="submit">Entrar</button>
+          <div class="info-strip">Credenciais de acesso: usuário <strong>admin</strong> e senha <strong>123</strong>.</div>
+          <div id="loginError" class="muted-text"></div>
+        </form>
+      </div>
+    </div>
+    <div class="login-right">
+      <div class="login-right__overlay"></div>
+      <div class="login-hero anim-up">
+        <h2 class="login-hero__title">Sistema organizado para a rotina financeira do supermercado.</h2>
+        <p class="login-hero__text">Persistência em localStorage, controle de anexos, relatórios com impressão e modo escuro global.</p>
+        <div class="login-hero-list">
+          <div class="login-hero-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="m18 20-6-6-6 6"/><path d="M6 4h12"/></svg><span>Dashboard com visão rápida de entradas, saídas, saldo e pendências</span></div>
+          <div class="login-hero-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16"/><path d="M7 4v16"/><path d="M17 4v16"/><path d="M4 17h16"/></svg><span>Cadastro de contas, categorias, funcionários e vales com filtros</span></div>
+          <div class="login-hero-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg><span>Relatórios consolidados com exportação pronta para impressão</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/services/storageService.js"></script>
+  <script src="../js/controllers/authController.js"></script>
+  <script src="../js/views/loginView.js"></script>
+</body>
+</html>
